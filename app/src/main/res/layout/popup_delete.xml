@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="25dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to delete this plant?"
+        android:textSize="22dp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/green4"
+        android:gravity="center"
+        android:layout_gravity="top"/>
+
+    <Button
+        android:id="@+id/popup_delete_cancel_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="Cancel"
+        android:textAllCaps="true"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:layout_gravity="bottom|right"/>
+
+    <Button
+        android:id="@+id/delete_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:text="Delete"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:textAllCaps="true"
+        android:layout_gravity="bottom"/>
+</androidx.cardview.widget.CardView>

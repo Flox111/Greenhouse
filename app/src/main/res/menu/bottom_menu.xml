@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/MyGreenhousesFragment"
+        android:title="Greenhouses"
+        android:icon="@drawable/ic_greenhouse2"/>
+    <item android:id="@+id/myPlantsFragment"
+        android:title="Plants"
+        android:icon="@drawable/ic_plant3" />
+    <item android:id="@+id/settingsFragment"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings" />
+</menu>

@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Greenhouse" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green2</item>
+        <item name="colorPrimaryVariant">@color/green4</item>
+        <item name="colorOnPrimary">@color/green4</item>
+        <item name="colorPrimaryDark">@color/green4</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorSecondaryVariant">@color/green1</item>
+        <item name="colorOnSecondary">@color/green4</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/green4</item>
+
+    </style>
+
+    <style name="MyTheme.Detail" parent="Theme.Greenhouse"></style>
+
+    <style name="expandedTitle">
+        <item name="android:textColorPrimary">@color/green4</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">28dp</item>
+    </style>
+
+    <style name="collapsedTitle">
+        <item name="android:textColorPrimary">@color/green4</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20dp</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="NavigationTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textStyle"></item>
+        <item name="android:textSize">13dp</item>
+    </style>
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="preview_photo_activity">
+        <item name="cornerSizeBottomLeft">5%</item>
+        <item name="cornerSizeBottomRight">5%</item>
+    </style>
+</resources>
