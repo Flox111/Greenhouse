@@ -36,7 +36,6 @@ public class CreateGreenhouseActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         etDate = findViewById(R.id.et_date_greenhouse);
 
         button = findViewById(R.id.button_add_photo_greenhouse);
@@ -78,5 +77,11 @@ public class CreateGreenhouseActivity extends AppCompatActivity {
 
         Uri uri = data.getData();
         imageView.setImageURI(uri);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

@@ -33,14 +33,24 @@
             android:name=".ui.activity.AuthActivity" />
         <activity android:name=".ui.plant.layout.CreatePlantActivity"
             android:parentActivityName=".ui.activity.MainActivity"/>
+
         <activity android:name=".ui.greenhouse.layout.CreateGreenhouseActivity"
             android:parentActivityName=".ui.activity.MainActivity"/>
+
         <activity android:name=".ui.plant.layout.PlantActivity"
             android:parentActivityName=".ui.activity.MainActivity"
             android:theme="@style/MyTheme.Detail"/>
+
         <activity android:name=".ui.greenhouse.layout.GreenhouseActivity"
             android:parentActivityName=".ui.activity.MainActivity"
             android:theme="@style/MyTheme.Detail"/>
+
+        <activity android:name=".ui.greenhouse.layout.SensorActivity"
+            android:parentActivityName=".ui.greenhouse.layout.GreenhouseActivity"/>
+
+        <activity android:name=".ui.note.layout.CreateNoteActivity"/>
+
+        <activity android:name=".ui.settings.SettingsActivity"/>
     </application>
 
 </manifest>

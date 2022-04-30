@@ -42,179 +42,63 @@
                 android:layout_height="?actionBarSize"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-            <!--<androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:layout_gravity="center|bottom"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="10dp"
-                app:cardCornerRadius="20dp"
-                android:fitsSystemWindows="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/plant_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_marginTop="17dp"
-                        android:layout_marginRight="17dp"
-                        android:text="Name"
-                        android:textColor="@color/green4"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/plant_description"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_marginBottom="17dp"
-                        android:text="Description"
-                        android:textColor="@color/green1"
-                        android:textSize="15dp" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>-->
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_greenhouse"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/green4"
+            app:tabTextAppearance="@style/NavigationTabTextAppearance"
+            app:tabTextColor="@color/green1"
+            app:tabIndicatorColor="@color/green3">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Панель управления" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Заметки" />
+
+        </com.google.android.material.tabs.TabLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/view_page"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_page_greenhouse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_add_note"
+        android:translationY="72dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:ignore="SpeakableTextPresentCheck">
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/add_note_bg"
+        android:layout_gravity="bottom|right">
 
-        <GridLayout
+        <Button
+            android:id="@+id/button_add_note"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:columnOrderPreserved="false"
-            android:orientation="horizontal"
-            android:padding="14dp"
-            android:rowCount="2">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="180dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="20dp">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="20dp"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/ic_temperature"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Temperature"
-                            android:textSize="15dp"
-                            android:paddingStart="10dp"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="0dp"
-                        android:text="25%"
-                        android:textSize="45dp"
-                        android:paddingTop="20dp"
-                        android:textAlignment="center"/>
-
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="160dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="30dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/plant2"/>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="160dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="30dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/plant2"></com.google.android.material.imageview.ShapeableImageView>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="180dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="8dp">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="30dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/plant2"></com.google.android.material.imageview.ShapeableImageView>
-            </androidx.cardview.widget.CardView>
-        </GridLayout>
-    </androidx.core.widget.NestedScrollView>
-
+            android:layout_height="32dp"
+            android:background="@drawable/button_add_note"
+            android:clickable="true"
+            android:paddingStart="15dp"
+            android:text="Что нового?"
+            android:textSize="15dp"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/green1"
+            style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

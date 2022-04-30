@@ -10,9 +10,10 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.maltsev.greenhouse.R;
+import com.maltsev.greenhouse.ui.fragment.HomeFragment;
 import com.maltsev.greenhouse.ui.greenhouse.layout.MyGreenhousesFragment;
 import com.maltsev.greenhouse.ui.plant.layout.MyPlantsFragment;
-import com.maltsev.greenhouse.ui.fragment.SettingsFragment;
+import com.maltsev.greenhouse.ui.settings.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new SettingsFragment()).commit();
-        bottomNavigationView.setSelectedItemId(R.id.settingsFragment);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, new HomeFragment()).commit();
+        bottomNavigationView.setSelectedItemId(R.id.homeFragment);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -34,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
                 Fragment selectedFragment = null;
 
                 switch(item.getItemId()){
-                    case R.id.settingsFragment:
-                        selectedFragment = new SettingsFragment();
+                    case R.id.homeFragment:
+                        selectedFragment = new HomeFragment();
                         break;
                     case R.id.myPlantsFragment:
                         selectedFragment = new MyPlantsFragment();
                         break;
-                    case R.id.MyGreenhousesFragment:
+                    case R.id.myGreenhousesFragment:
                         selectedFragment = new MyGreenhousesFragment();
                         break;
                 }

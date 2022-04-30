@@ -43,7 +43,12 @@
     </style>
 
     <style name="preview_photo_activity">
-        <item name="cornerSizeBottomLeft">5%</item>
-        <item name="cornerSizeBottomRight">5%</item>
+        <item name="cornerSizeBottomLeft">0%</item>
+        <item name="cornerSizeBottomRight">0%</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@color/green4</item>
     </style>
 </resources>

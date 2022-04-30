@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/MyGreenhousesFragment"
-        android:title="Greenhouses"
+    <item android:id="@+id/homeFragment"
+        android:title="Дом"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:id="@+id/myGreenhousesFragment"
+        android:title="Теплицы"
         android:icon="@drawable/ic_greenhouse2"/>
     <item android:id="@+id/myPlantsFragment"
-        android:title="Plants"
+        android:title="Цветы"
         android:icon="@drawable/ic_plant3" />
-    <item android:id="@+id/settingsFragment"
-        android:title="Settings"
-        android:icon="@drawable/ic_settings" />
 </menu>

@@ -34,11 +34,12 @@ public class MyGreenhousesFragment extends Fragment {
         greenhouses = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             Greenhouse greenhouse = new Greenhouse();
-            greenhouse.setName("Name");
+            greenhouse.setName("Greenhouse" + i);
             greenhouse.setDescription("Description");
             greenhouses.add(greenhouse);
             greenhouses.get(i).setImageUrl("https://images.unsplash.com/photo-1589885616367-e131e99a6147?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
         }
+
         RecyclerView recyclerView = root.findViewById(R.id.recyclerview_greenhouses);
         recyclerViewAdapterGreenhouses = new RecyclerViewAdapterGreenhouses(getContext(), greenhouses);
         recyclerView.setAdapter(recyclerViewAdapterGreenhouses);

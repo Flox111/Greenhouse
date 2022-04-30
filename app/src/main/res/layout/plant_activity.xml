@@ -42,47 +42,6 @@
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-            <!--<androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:layout_gravity="center|bottom"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="10dp"
-                app:cardCornerRadius="20dp"
-                android:fitsSystemWindows="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/plant_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_marginTop="17dp"
-                        android:layout_marginRight="17dp"
-                        android:text="Name"
-                        android:textColor="@color/green4"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/plant_description"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="17dp"
-                        android:layout_marginBottom="17dp"
-                        android:text="Description"
-                        android:textColor="@color/green1"
-                        android:textSize="15dp" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>-->
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         <com.google.android.material.tabs.TabLayout
@@ -93,6 +52,7 @@
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/green4"
             app:tabTextColor="@color/green1"
+            app:tabIndicatorColor="@color/green3"
             app:tabTextAppearance="@style/NavigationTabTextAppearance">
 
             <com.google.android.material.tabs.TabItem
@@ -114,9 +74,36 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_page"
+        android:id="@+id/view_page_plant"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"></androidx.viewpager2.widget.ViewPager2>
+        android:layout_marginTop="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
+    <LinearLayout
+        android:id="@+id/layout_add_note"
+        android:translationY="72dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/add_note_bg"
+        android:layout_gravity="bottom|right">
+
+        <Button
+            android:id="@+id/button_add_note"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/button_add_note"
+            android:clickable="true"
+            android:paddingStart="15dp"
+            android:text="Что нового?"
+            android:textSize="15dp"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/green1"
+            style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

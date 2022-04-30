@@ -47,14 +47,17 @@ public class RecyclerViewAdapterGreenhouses extends RecyclerView.Adapter<Recycle
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        holder.textViewName.setText(mData.get(position).getName());
+        holder.textViewDescription.setText(mData.get(position).getDescription());
+
         if (mData.get(position).getImageUrl() != null) {
             Glide.with(mContext).load(mData.get(position).getImageUrl()).into(holder.preview);
         }
 
         holder.cardView.setOnClickListener(view -> {
             Intent intent = new Intent(mContext, GreenhouseActivity.class);
-            intent.putExtra("Name", mData.get(holder.getAdapterPosition()).getName());
-            intent.putExtra("ImageUrl", mData.get(holder.getAdapterPosition()).getImageUrl());
+            intent.putExtra("name", mData.get(holder.getAdapterPosition()).getName());
+            intent.putExtra("imageUrl", mData.get(holder.getAdapterPosition()).getImageUrl());
             mContext.startActivity(intent);
         });
     }

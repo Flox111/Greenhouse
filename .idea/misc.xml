@@ -3,50 +3,81 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable-v24/ic_baseline_notifications_24.xml" value="0.12564102564102564" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable-v24/ic_baseline_settings_24.xml" value="0.12564102564102564" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable-v24/scrim.xml" value="0.202991452991453" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable-v24/scrim_topdown.xml" value="0.202991452991453" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/add_node_bg.xml" value="0.21495726495726497" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/add_note_bg.xml" value="0.10427350427350428" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/bottom_menu_color.xml" value="0.1064102564102564" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/button_add_note.xml" value="0.2" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/button_bg.xml" value="0.202991452991453" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/chart_background.xml" value="0.2" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/chart_background1.xml" value="0.11752136752136752" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/chart_background2.xml" value="0.11752136752136752" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/chart_background3.xml" value="0.11752136752136752" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/chart_background4.xml" value="0.11752136752136752" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/divider_notes.xml" value="0.536" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/edit_text_bg.xml" value="0.21495726495726497" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/fade_red.xml" value="0.12606837606837606" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/home_background.xml" value="0.13931623931623932" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic__greenhouse2.xml" value="0.21495726495726497" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_add.xml" value="0.1064102564102564" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_add_a_photo.xml" value="0.10982905982905983" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_baseline_calendar_month_24.xml" value="0.21495726495726497" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_baseline_done_24.xml" value="0.21495726495726497" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_florist.xml" value="0.12350427350427351" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_greenhouse.xml" value="0.11538461538461539" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_greenhouse2.xml" value="0.21495726495726497" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_greenhouse3.xml" value="0.21495726495726497" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_label.xml" value="0.13931623931623932" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_more_vert_black_24dp.xml" value="0.13974358974358975" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_plant2.xml" value="0.10982905982905983" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_plant3.xml" value="0.10982905982905983" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/ic_settings.xml" value="0.1064102564102564" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/note_background.xml" value="0.264" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/note_background_on_pressed.xml" value="0.21223628691983124" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/squar_circle.xml" value="0.10982905982905983" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/square_bg_text.xml" value="0.202991452991453" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/square_bg_text2.xml" value="0.15341880341880343" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/drawable/underline.xml" value="0.2" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/activity_create_greenhouse.xml" value="0.264" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/activity_create_note.xml" value="0.4" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/activity_create_plant.xml" value="0.264" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/activity_reminders.xml" value="0.20170940170940171" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/activity_sensor.xml" value="0.264" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/activity_settings.xml" value="0.12393162393162394" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/activity_temp.xml" value="0.20170940170940171" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/auth_view.xml" value="0.25" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/cardview_item_chart.xml" value="0.20170940170940171" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/cardview_item_greenhouse.xml" value="0.264" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/cardview_item_note.xml" value="0.4766355140186916" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/cardview_item_plant.xml" value="0.264" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/cardview_item_sensor.xml" value="0.536" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/cardview_note.xml" value="0.4" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/chart_view.xml" value="0.20512820512820512" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/charts_view.xml" value="0.20170940170940171" />
-        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/fragment_my_greenhouses.xml" value="0.4" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/control_panel_tab_fragment.xml" value="0.4" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/custom_marker_view.xml" value="0.6" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/fragment_my_greenhouses.xml" value="0.2523364485981308" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/fragment_my_plants.xml" value="0.264" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/fragment_settings.xml" value="0.2" />
-        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/greenhouse_activity.xml" value="0.264" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/greenhouse_activity.xml" value="0.31140939597315437" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/home_fragment.xml" value="0.24556962025316456" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/notes_greenhouse_tab_fragment.xml" value="0.152" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/notes_tab_fragment.xml" value="0.264" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/plant_activity.xml" value="0.264" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/popup_delete.xml" value="0.264" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/popup_edit.xml" value="0.264" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/preferences_category.xml" value="0.4" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/sigin_tab_fragment.xml" value="0.1925925925925926" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/signin_tab_fragment.xml" value="0.19722222222222222" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/signup_tab_fragment.xml" value="0.1925925925925926" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/layout/temp.xml" value="0.264" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/menu/bottom_menu.xml" value="0.264" />
         <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/menu/popup_menu_plant.xml" value="0.536" />
+        <entry key="..\:/Users/Artem/AndroidStudioProjects/Greenhouse/app/src/main/res/xml/root_preferences.xml" value="0.4" />
       </map>
     </option>
   </component>

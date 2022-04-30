@@ -1,13 +1,29 @@
 package com.maltsev.greenhouse.ui.plant.model;
 
 public class Plant {
-
+    private long id;
     private String name;
     private String description;
     private String imageUrl;
 
-    public Plant(){
 
+
+    public Plant(){
+    }
+
+    public Plant(long id, String name, String description, String imageUrl) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.imageUrl = imageUrl;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -33,4 +49,5 @@ public class Plant {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
 }
