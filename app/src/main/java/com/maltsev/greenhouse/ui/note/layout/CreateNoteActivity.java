@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -21,9 +22,16 @@ import androidx.core.content.ContextCompat;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.maltsev.greenhouse.R;
+import com.maltsev.greenhouse.common.DateFormatter;
 
+import java.sql.Timestamp;
 import java.text.DateFormatSymbols;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Calendar;
+import java.util.Date;
 
 public class CreateNoteActivity extends AppCompatActivity {
 
@@ -60,14 +68,13 @@ public class CreateNoteActivity extends AppCompatActivity {
         final int month = calendar.get(Calendar.MONTH);
         final int day = calendar.get(Calendar.DATE);
 
-        edDate.setText(getDayOfWeek(calendar) + ", " + new DateFormatSymbols().getShortMonths()[month] + " " +
-                +day);
+        edDate.setText(DateFormatter.getShortDate(calendar, month, day));
 
         edDate.setOnClickListener(view -> {
             DatePickerDialog datePickerDialog = new DatePickerDialog(
                     CreateNoteActivity.this, (datePicker, year1, month1, day1) -> {
-                String date = new DateFormatSymbols().getShortMonths()[month1] + " " +
-                        +day1 + ", " + year1;
+                calendar.set(year1, month1, day1);
+                String date = DateFormatter.getShortDate(calendar, month1, day1);
                 edDate.setText(date);
             }, year, month, day);
             datePickerDialog.show();
@@ -78,7 +85,7 @@ public class CreateNoteActivity extends AppCompatActivity {
             if (edDate.getText().toString() != "" && edText.getText().toString() != "") {
                 Intent returnIntent = new Intent();
 
-                String dateString = edDate.getText().toString();
+                String dateString = Long.toString(calendar.getTimeInMillis());
                 String textString = edText.getText().toString();
                 returnIntent.putExtra("date", dateString);
                 returnIntent.putExtra("text", textString);
@@ -124,19 +131,6 @@ public class CreateNoteActivity extends AppCompatActivity {
         return true;
     }
 
-    private String getDayOfWeek(Calendar calendar) {
-        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
-        String weekDay = "";
-        if (Calendar.MONDAY == dayOfWeek) weekDay = "Monday";
-        else if (Calendar.TUESDAY == dayOfWeek) weekDay = "Tuesday";
-        else if (Calendar.WEDNESDAY == dayOfWeek) weekDay = "Wednesday";
-        else if (Calendar.THURSDAY == dayOfWeek) weekDay = "Thursday";
-        else if (Calendar.FRIDAY == dayOfWeek) weekDay = "Friday";
-        else if (Calendar.SATURDAY == dayOfWeek) weekDay = "Saturday";
-        else if (Calendar.SUNDAY == dayOfWeek) weekDay = "Sunday";
-
-        return weekDay;
-    }
 
     private void closeKeyboard() {
         View view = getCurrentFocus();
@@ -145,6 +139,5 @@ public class CreateNoteActivity extends AppCompatActivity {
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
-
 
 }

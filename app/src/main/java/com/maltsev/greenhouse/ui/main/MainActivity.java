@@ -1,4 +1,4 @@
-package com.maltsev.greenhouse.ui.activity;
+package com.maltsev.greenhouse.ui.main;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,10 +10,9 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.maltsev.greenhouse.R;
-import com.maltsev.greenhouse.ui.fragment.HomeFragment;
 import com.maltsev.greenhouse.ui.greenhouse.layout.MyGreenhousesFragment;
+import com.maltsev.greenhouse.ui.home.HomeFragment;
 import com.maltsev.greenhouse.ui.plant.layout.MyPlantsFragment;
-import com.maltsev.greenhouse.ui.settings.SettingsFragment;
 
 public class MainActivity extends AppCompatActivity {
 

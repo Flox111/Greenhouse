@@ -8,6 +8,7 @@
         <EditTextPreference
             app:key="ip"
             app:title="Адрес сервера"
+            app:defaultValue="192.168.1.1:8080"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>

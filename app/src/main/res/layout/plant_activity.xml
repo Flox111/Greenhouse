@@ -20,7 +20,7 @@
             android:layout_height="320dp"
             app:contentScrim="@color/background"
             app:statusBarScrim="@color/background"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:layout_scrollFlags="scroll|enterAlways"
             android:fitsSystemWindows="true"
             app:collapsedTitleTextAppearance="@style/collapsedTitle"
             app:expandedTitleTextAppearance="@style/expandedTitle"

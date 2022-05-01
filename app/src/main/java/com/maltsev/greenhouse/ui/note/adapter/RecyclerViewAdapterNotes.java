@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.maltsev.greenhouse.R;
+import com.maltsev.greenhouse.common.DateFormatter;
 import com.maltsev.greenhouse.ui.greenhouse.model.Note;
 
 import java.util.ArrayList;
@@ -35,8 +36,9 @@ public class RecyclerViewAdapterNotes extends RecyclerView.Adapter<RecyclerViewA
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapterNotes.MyViewHolder holder, int position) {
-        holder.date.setText(mData.get(position).getDate());
         holder.text.setText(mData.get(position).getText());
+        String date = DateFormatter.getDateFromDatabase(mData.get(position).getDate());
+        holder.date.setText(date);
     }
 
     @Override
