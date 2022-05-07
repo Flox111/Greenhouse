@@ -147,7 +147,7 @@ public class SensorActivity extends AppCompatActivity {
             chart.getData().notifyDataChanged();
             chart.notifyDataSetChanged();
         } else {
-            set1 = new LineDataSet(values, getIntent().getExtras().get("Title").toString());
+            set1 = new LineDataSet(values, getIntent().getExtras().get("title").toString());
 
             set1.setDrawIcons(false);
 

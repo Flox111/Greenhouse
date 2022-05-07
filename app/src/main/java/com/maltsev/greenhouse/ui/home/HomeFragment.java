@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.maltsev.greenhouse.R;
 import com.maltsev.greenhouse.ui.login.LoginActivity;
+import com.maltsev.greenhouse.ui.plant.layout.NewReminderActivity;
 import com.maltsev.greenhouse.ui.settings.SettingsActivity;
 import com.maltsev.greenhouse.ui.settings.SettingsFragment;
 

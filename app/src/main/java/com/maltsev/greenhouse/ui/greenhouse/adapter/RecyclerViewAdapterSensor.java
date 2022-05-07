@@ -43,10 +43,11 @@ public class RecyclerViewAdapterSensor extends RecyclerView.Adapter<RecyclerView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.sensorTitle.setText(mData.get(position).getSensorTitle());
         holder.sensorValue.setText(mData.get(position).getSensorValue());
+        holder.sensorNumberSystem.setText(mData.get(position).getSensorNumberSystem());
 
         holder.cardView.setOnClickListener(view -> {
             Intent intent = new Intent(mContext, SensorActivity.class);
-            intent.putExtra("Title", mData.get(holder.getAdapterPosition()).getSensorTitle());
+            intent.putExtra("title", mData.get(holder.getAdapterPosition()).getSensorTitle());
             intent.putExtra("name", nameOfGreenhouse);
             mContext.startActivity(intent);
         });
@@ -61,6 +62,7 @@ public class RecyclerViewAdapterSensor extends RecyclerView.Adapter<RecyclerView
 
         private TextView sensorTitle;
         private TextView sensorValue;
+        private TextView sensorNumberSystem;
         private CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -68,6 +70,7 @@ public class RecyclerViewAdapterSensor extends RecyclerView.Adapter<RecyclerView
             sensorTitle = itemView.findViewById(R.id.sensor_card_title);
             sensorValue = itemView.findViewById(R.id.sensor_card_value);
             cardView = itemView.findViewById(R.id.card_view_sensor);
+            sensorNumberSystem = itemView.findViewById(R.id.number_system);
         }
 
     }

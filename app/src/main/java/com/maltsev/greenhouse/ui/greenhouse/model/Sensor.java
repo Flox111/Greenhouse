@@ -3,10 +3,12 @@ package com.maltsev.greenhouse.ui.greenhouse.model;
 public class Sensor {
     private String sensorTitle;
     private String sensorValue;
+    private String sensorNumberSystem;
 
-    public Sensor(String sensorTitle, String sensorValue) {
+    public Sensor(String sensorTitle, String sensorValue, String sensorNumberSystem) {
         this.sensorTitle = sensorTitle;
         this.sensorValue = sensorValue;
+        this.sensorNumberSystem = sensorNumberSystem;
     }
 
     public Sensor() {
@@ -26,5 +28,13 @@ public class Sensor {
 
     public void setSensorValue(String sensorValue) {
         this.sensorValue = sensorValue;
+    }
+
+    public String getSensorNumberSystem() {
+        return sensorNumberSystem;
+    }
+
+    public void setSensorNumberSystem(String sensorNumberSystem) {
+        this.sensorNumberSystem = sensorNumberSystem;
     }
 }

@@ -39,6 +39,7 @@ public class CreateNoteActivity extends AppCompatActivity {
     TextInputEditText edText;
     EditText edDate;
     EditText title;
+    Calendar calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +64,8 @@ public class CreateNoteActivity extends AppCompatActivity {
 
 
         edDate = findViewById(R.id.add_note_date);
-        Calendar calendar = Calendar.getInstance();
+
+        calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
         final int month = calendar.get(Calendar.MONTH);
         final int day = calendar.get(Calendar.DATE);
@@ -71,13 +73,7 @@ public class CreateNoteActivity extends AppCompatActivity {
         edDate.setText(DateFormatter.getShortDate(calendar, month, day));
 
         edDate.setOnClickListener(view -> {
-            DatePickerDialog datePickerDialog = new DatePickerDialog(
-                    CreateNoteActivity.this, (datePicker, year1, month1, day1) -> {
-                calendar.set(year1, month1, day1);
-                String date = DateFormatter.getShortDate(calendar, month1, day1);
-                edDate.setText(date);
-            }, year, month, day);
-            datePickerDialog.show();
+            handleDateButton();
         });
 
         done = findViewById(R.id.done);
@@ -124,6 +120,23 @@ public class CreateNoteActivity extends AppCompatActivity {
 
     }
 
+    private void handleDateButton(){
+        final int year = calendar.get(Calendar.YEAR);
+        final int month = calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DATE);
+
+        edDate.setText(DateFormatter.getShortDate(calendar, month, day));
+
+        edDate.setOnClickListener(view -> {
+            DatePickerDialog datePickerDialog = new DatePickerDialog(
+                    CreateNoteActivity.this, (datePicker, year1, month1, day1) -> {
+                calendar.set(year1, month1, day1);
+                String date = DateFormatter.getShortDate(calendar, month1, day1);
+                edDate.setText(date);
+            }, year, month, day);
+            datePickerDialog.show();
+        });
+    }
     @Override
     public boolean onSupportNavigateUp() {
         closeKeyboard();

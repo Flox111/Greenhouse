@@ -35,7 +35,7 @@ public class PlantActivity extends AppCompatActivity {
     private ViewPager2 viewPager;
     private PlantTabsAdapter adapter;
     private LinearLayout layoutAddNote;
-
+    private TextView namePlant;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
@@ -56,6 +56,9 @@ public class PlantActivity extends AppCompatActivity {
         if (getSupportActionBar() != null)
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        namePlant = findViewById(R.id.name_plant);
+        namePlant.setText(getIntent().getExtras().getString("name"));
+
         preview = findViewById(R.id.preview_plant);
         Glide.with(this).load(getIntent().getExtras().getString("imageUrl")).into(preview);
 
@@ -63,12 +66,18 @@ public class PlantActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.view_page_plant);
         tabLayout = findViewById(R.id.tab_layout_plant);
 
+        int maxOffset = 300;
         appBarLayout.addOnOffsetChangedListener((appBarLayout, verticalOffset) -> {
-            if (Math.abs(verticalOffset) > 200) {
-                invalidateOptionsMenu();
-            } else {
+            if (Math.abs(verticalOffset) > 0) {
                 invalidateOptionsMenu();
             }
+            float alpha = (float)Math.abs(verticalOffset) / maxOffset;
+            int color = getColorWithAlpha(alpha, Color.parseColor("#e3f3f0"));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                getWindow().setStatusBarColor(color);
+            }
+            toolbar.setBackgroundColor(color);
+            toolbar.setTitleTextColor(getColorWithAlpha(alpha, Color.parseColor("#2e6657")));
         });
 
         FragmentManager fm = getSupportFragmentManager();
@@ -80,10 +89,9 @@ public class PlantActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
-                if (tab.getPosition() == 1){
+                if (tab.getPosition() == 1) {
                     layoutAddNote.animate().translationY(0);
-                }
-                else{
+                } else {
                     layoutAddNote.animate().translationY(layoutAddNote.getHeight());
                 }
             }
@@ -105,6 +113,12 @@ public class PlantActivity extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
+    }
+
+    public static int getColorWithAlpha(float alpha, int baseColor) {
+        int a = Math.min(255, Math.max(0, (int) (alpha * 255))) << 24;
+        int rgb = 0x00ffffff & baseColor;
+        return a + rgb;
     }
 
     @Override

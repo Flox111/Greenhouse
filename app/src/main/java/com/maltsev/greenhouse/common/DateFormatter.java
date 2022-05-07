@@ -13,6 +13,17 @@ public class DateFormatter {
         return formatter.format(calendar.getTime());
     }
 
+    public static String getDateNow() {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Calendar calendar = Calendar.getInstance();
+        return formatter.format(calendar.getTime());
+    }
+
+    public static String getTimeNow(Calendar calendar) {
+        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");
+        return formatter.format(calendar.getTime());
+    }
+
     public static String getDayOfWeek(Calendar calendar) {
         int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
         String weekDay = "";

@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:orientation="vertical"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,30 +16,135 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar_plant"
             android:layout_width="match_parent"
-            android:layout_height="320dp"
-            app:contentScrim="@color/background"
-            app:statusBarScrim="@color/background"
-            app:layout_scrollFlags="scroll|enterAlways"
-            android:fitsSystemWindows="true"
-            app:collapsedTitleTextAppearance="@style/collapsedTitle"
-            app:expandedTitleTextAppearance="@style/expandedTitle"
-            app:titleTextColor="@color/green4">
+            android:layout_height="350dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false"
+            app:statusBarScrim="@android:color/transparent">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/preview_plant"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:scaleType="centerCrop"
-                app:shapeAppearanceOverlay="@style/preview_photo_activity"
-                app:srcCompat="@drawable/plant2"
-                android:fitsSystemWindows="true"/>
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/preview_plant"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="pin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/preview_photo_activity"
+                    app:srcCompat="@drawable/plant2" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name_plant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:paddingStart="10dp"
+                            android:text="Title"
+                            android:textColor="@color/green4"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/square_bg_text2"
+                            android:backgroundTint="@color/light_blue"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Дата посадки:"
+                                android:textColor="@color/green4"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:minWidth="140dp"
+                                android:paddingStart="20dp"
+                                android:text="29"
+                                android:textColor="@color/green4"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Описание"
+                                android:textColor="@color/green4"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:minWidth="140dp"
+                                android:paddingStart="20dp"
+                                android:text="29"
+                                android:textColor="@color/green4"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_plant"
                 android:layout_width="match_parent"
-                android:layout_height="?actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -49,11 +153,10 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             app:tabGravity="fill"
+            app:tabIndicatorColor="@color/green3"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/green4"
-            app:tabTextColor="@color/green1"
-            app:tabIndicatorColor="@color/green3"
-            app:tabTextAppearance="@style/NavigationTabTextAppearance">
+            app:tabTextColor="@color/green1">
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -77,33 +180,33 @@
         android:id="@+id/view_page_plant"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        android:layout_marginTop="15dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <LinearLayout
         android:id="@+id/layout_add_note"
-        android:translationY="72dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="18dp"
-        android:paddingRight="18dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
+        android:layout_gravity="bottom|right"
         android:background="@drawable/add_note_bg"
-        android:layout_gravity="bottom|right">
+        android:paddingLeft="18dp"
+        android:paddingTop="20dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="20dp"
+        android:translationY="72dp">
 
         <Button
             android:id="@+id/button_add_note"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:background="@drawable/button_add_note"
             android:clickable="true"
             android:paddingStart="15dp"
             android:text="Что нового?"
-            android:textSize="15dp"
             android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textColor="@color/green1"
-            style="?android:attr/borderlessButtonStyle" />
+            android:textSize="15dp" />
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

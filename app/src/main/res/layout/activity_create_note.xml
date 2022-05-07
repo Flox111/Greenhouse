@@ -42,16 +42,17 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_greenhouse2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_greenhouse2"
                 app:tint="@color/green4"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="25dp"
                 android:layout_gravity="center"/>
             <EditText
                 android:id="@+id/title_create_note"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="15dp"
                 android:textColor="@color/green_no_active"
                 android:clickable="false"
                 android:cursorVisible="false"
@@ -75,16 +76,17 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_calendar_month_24"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_baseline_calendar_month_24"
                 app:tint="@color/green4"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="25dp"
                 android:layout_gravity="center"/>
             <EditText
                 android:id="@+id/add_note_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="15dp"
                 android:clickable="false"
                 android:cursorVisible="false"
                 android:focusable="false"
@@ -99,6 +101,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginLeft="40dp"
             android:background="@drawable/underline"/>
+
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_text_note"
